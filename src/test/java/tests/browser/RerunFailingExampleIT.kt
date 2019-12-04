@@ -3,12 +3,14 @@ package tests.browser
 import io.github.artsok.RepeatedIfExceptionsTest
 import org.junit.jupiter.api.DisplayName
 
-class RerunFailingExampleIT {
+class RerunFailingExampleIT 
+{
 
     @RepeatedIfExceptionsTest(repeats = 3)
     fun `will be repeated max three times if test failed`() {
         // throw Exception("Error in Test") would lead to repeatition of test
     }
+    
 
     @RepeatedIfExceptionsTest(repeats = 2, exceptions = [NoSuchElementException::class])
     fun `will only be repeated on certain exception`() {

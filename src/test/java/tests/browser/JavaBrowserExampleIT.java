@@ -54,6 +54,12 @@ class JavaBrowserExampleIT extends BrowserTest {
     void will_only_run_if_system_properties_matches__otherwise_skipped() {
         // do something here
     }
+    
+    @Test
+    @EnabledIfSystemProperty(named = "os.arch", matches = ".*64.*")
+    void will_only_run_if_system_properties_matches__otherwise_skipped_2() {
+        // do something here
+    }
 
     @Test
     @EnabledIfEnvironmentVariable(named = "ENV", matches = "ci")
