@@ -20,7 +20,7 @@ class BrowserTestExampleIT : BrowserTest() {
     fun `an example test using page object pattern`() {
         goTo(page)
         assertThat(page.searchField).isDisplayed
-        
+      
     }
 
     @Test
